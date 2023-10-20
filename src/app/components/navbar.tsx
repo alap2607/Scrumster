@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <>
     <nav className="nav-bar">
-    <a href="#"><Image className="img" src={logo} alt="logo" /></a>
+    <a href="#"><Image className="logo" src={logo} alt="logo" /></a>
 	<ul className="nav-btns">
 		<li className="btn"><a href="#" className="link">Home</a></li>
 		<li className="btn">
