@@ -1,0 +1,35 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    z-index: 999;
+    border-bottom: 0.5px solid grey;
+  }
+  .nav-bar .nav-logo{
+    width: auto;
+    height: 24px;
+    margin: 20px;
+  }
+  .nav-bar .nav-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: 24px;
+    margin-right: 10px;
+  }
+  .nav-bar .nav-item {
+    display: inline-block;
+    margin: 20px 10px;
+  }
+  .nav-bar .nav-item .nav-item-link {
+    display: block;
+    padding: 4px 34px;
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+  }
