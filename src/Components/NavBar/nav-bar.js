@@ -71,10 +71,10 @@ export default function NavBar() {
                   <button
                     ref={dropdownRef}
                     onClick={onClick}
-                    className={`nav-link ${isActive ? "active" : "inactive"}`}
+                    className={`nav-dropdown-btn ${isActive ? "active" : "inactive"}`}
                     id="nav-tools"
                   >
-                    <span className="nav-display-name">{item.displayName}</span>
+                    <span className="nav-dropdown-btn-display-name">{item.displayName}</span>
                     <ExpandMoreIcon></ExpandMoreIcon>
                   </button>
                   {item.children && item.children.length > 0 && (
@@ -92,7 +92,6 @@ export default function NavBar() {
               )}
             </li>
           ))}
-          ;
         </ul>
       </nav>
     </>
