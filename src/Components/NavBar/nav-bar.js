@@ -11,7 +11,7 @@ export default function NavBar() {
         displayName: "Home",
         type: "link",
         id: "navItemHome",
-        url: "/Home",
+        url: "/home",
       },
       {
         displayName: "Tools",
@@ -22,28 +22,28 @@ export default function NavBar() {
             displayName: "Timer",
             type: "link",
             id: "navItemToolsTimer",
-            url: "/scrum-poker",
+            url: "/timer",
             target: "_blank",
           },
           {
             displayName: "Random Number Generator",
             type: "link",
             id: "navItemToolsRandomNumberGenerator",
-            url: "/retro-board",
+            url: "/random-number-generator",
             target: "_blank",
           },
           {
             displayName: "Pick Random Team Member",
             type: "link",
             id: "navItemToolsPickRandomTeamMember",
-            url: "/retro-board",
+            url: "/pick-random-team-memeber",
             target: "_blank",
           },
           {
             displayName: "ScrumPoker",
             type: "link",
             id: "navItemToolsScrumPoker",
-            url: "/retro-board",
+            url: "/scrum-poker",
             target: "_blank",
           },
         ],
@@ -56,14 +56,14 @@ export default function NavBar() {
   return (
     <>
       <nav className="nav-bar">
-        <a href="/logo">
+        <a href="/home">
           <img className="nav-logo" src={logo} alt="app logo"></img>
         </a>
         <ul className="nav-items">
           {navConfig.navItems.map((item) => (
             <li className="nav-item" key={item.id}>
               {item.type === "link" ? (
-                <a className="nav-item-link" href={item.url}>
+                <a className="nav-link" href={item.url}>
                   {item.displayName}
                 </a>
               ) : (
@@ -71,14 +71,10 @@ export default function NavBar() {
                   <button
                     ref={dropdownRef}
                     onClick={onClick}
-                    className={`nav-item-link ${
-                      isActive ? "active" : "inactive"
-                    }`}
-                    id="nav-item-tools"
+                    className={`nav-link ${isActive ? "active" : "inactive"}`}
+                    id="nav-tools"
                   >
-                    <span className="nav-tools-display-name">
-                      {item.displayName}
-                    </span>
+                    <span className="nav-display-name">{item.displayName}</span>
                     <ExpandMoreIcon></ExpandMoreIcon>
                   </button>
                   {item.children && item.children.length > 0 && (

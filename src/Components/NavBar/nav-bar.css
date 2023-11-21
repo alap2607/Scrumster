@@ -6,11 +6,13 @@
   z-index: 999;
   border-bottom: 0.5px solid grey;
 }
+
 .nav-bar .nav-logo {
   width: auto;
   height: 24px;
   margin: 20px;
 }
+
 .nav-bar .nav-items {
   list-style-type: none;
   padding: 0;
@@ -19,6 +21,7 @@
   height: 24px;
   margin-right: 10px;
 }
+
 .nav-bar .nav-item {
   position: relative;
   display: inline-block;
@@ -26,7 +29,8 @@
   padding: 0;
   margin: 20px 10px;
 }
-.nav-bar .nav-item .nav-item-link {
+
+.nav-bar .nav-item .nav-link {
   display: flex;
   padding: 0px 20px;
   text-decoration: none;
@@ -38,10 +42,12 @@
   line-height: 24px;
   text-decoration: none;
 }
-.nav-bar .nav-item button.nav-item-link {
+
+.nav-bar .nav-item button.nav-link {
   padding-right: 0;
 }
-#nav-item-tools {
+
+#nav-tools {
   background-color: black;
   cursor: pointer;
   font-weight: 700;
@@ -49,21 +55,25 @@
   font-size: 14px;
   line-height: 24px;
 }
-.nav-tools-display-name {
+
+.nav-display-name {
   display: flex;
   flex-direction: row;
   padding-right: 20px;
   border-right: 1px solid grey;
 }
-.nav-item-tools:hover {
+
+.nav-tools:hover {
   box-shadow: 0 1px 8px black;
 }
-.nav-item-tools span {
+
+.nav-tools span {
   font-weight: 700;
   vertical-align: middle;
   font-size: 14px;
   margin: 0 10px;
 }
+
 .tools {
   background: black;
   border-radius: 4px;
@@ -79,13 +89,28 @@
   transform: translateY(5px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
-.nav-item-link.active ~ .tools {
+
+.nav-link.active ~ .tools {
   opacity: 1;
   visibility: visible;
 }
-.nav-item-link.active > svg {
+
+.nav-link:hover {
   background-color: #80808093;
 }
+
+.nav-display-name:hover + svg {
+  background-color: #80808093;
+}
+
+.nav-link.active > svg {
+  background-color: #80808093;
+}
+
+.nav-link > svg:hover {
+  background-color: #80808093;
+}
+
 .tools > .tool-item {
   border-bottom: 1px solid grey;
   font-size: 14px;
@@ -103,4 +128,8 @@
   font-size: 14px;
   line-height: 24px;
   text-decoration: none;
+}
+
+.nav-child-link:hover {
+  background-color: #80808093;
 }
