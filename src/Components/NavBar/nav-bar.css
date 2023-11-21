@@ -1,0 +1,135 @@
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  border-bottom: 0.5px solid grey;
+}
+
+.nav-bar .nav-logo {
+  width: auto;
+  height: 24px;
+  margin: 16px 20px;
+}
+
+.nav-bar .nav-items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  margin-right: 10px;
+}
+
+.nav-bar .nav-item {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin: 16px 10px;
+}
+
+.nav-bar .nav-item .nav-link, .nav-bar .nav-item .nav-dropdown-btn {
+  display: flex;
+  padding: 0px 20px;
+  text-decoration: none;
+  border: 1px solid grey;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav-bar .nav-item .nav-dropdown-btn {
+  padding-right: 0;
+}
+
+.nav-dropdown-btn {
+  background-color: black;
+  cursor: pointer;
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.nav-dropdown-btn-display-name {
+  display: flex;
+  flex-direction: row;
+  padding-right: 20px;
+  border-right: 1px solid grey;
+}
+
+.nav-tools:hover {
+  box-shadow: 0 1px 8px black;
+}
+
+.nav-tools span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.tools {
+  background: black;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+  width: max-content;
+  border: 1px solid grey;
+  opacity: 0;
+  visibility: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  transform: translateY(5px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.nav-dropdown-btn.active ~ .tools {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-link:hover {
+  background-color: #80808093;
+}
+
+.nav-dropdown-btn-display-name:hover + svg {
+  background-color: #80808093;
+}
+
+.nav-dropdown-btn.active > svg {
+  background-color: #80808093;
+}
+
+.nav-dropdown-btn > svg:hover {
+  background-color: #80808093;
+}
+
+.tools > .tool-item {
+  border-bottom: 1px solid grey;
+  font-size: 14px;
+}
+
+.tools > .tool-item:last-of-type {
+  border-bottom: 0;
+}
+
+.nav-bar .nav-item .nav-child-link {
+  display: flex;
+  padding: 0px 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.nav-child-link:hover {
+  background-color: #80808093;
+}
